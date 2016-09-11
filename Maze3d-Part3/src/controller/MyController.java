@@ -2,6 +2,7 @@ package controller;
 
 import java.util.HashMap;
 
+import controller.Commands.DirCommand;
 import controller.Commands.DisplayCommand;
 import controller.Commands.DisplayCrossSectionCommand;
 import controller.Commands.DisplaySolutionCommand;
@@ -13,7 +14,6 @@ import controller.Commands.SaveMazeCommand;
 import controller.Commands.SolveCommand;
 //import controller.Commands.help;
 import model.Model;
-import sss.DirCommand;
 import view.View;
 
 public class MyController implements Controller {
