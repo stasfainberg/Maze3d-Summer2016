@@ -30,8 +30,18 @@ import controller.Controller;
 import io.MyCompressorOutputStream;
 import io.MyDecompressorInputStream;
 
+
+/**
+ *<h1>MyModel</h1>
+ * @author Stas Fainberg
+ * This class receives the commands from the presenter and execute them.
+ * When the model is done the message is sent to the presenter.
+ */
 public class MyModel implements Model {
 	
+	
+	
+	/********************************* Data Members *********************************/
 	private Controller controller;
 	private ArrayList<Thread> threads = new ArrayList<Thread>();
 	private HashMap<String, Maze3d> mazes = new HashMap<String, Maze3d>();
@@ -43,6 +53,8 @@ public class MyModel implements Model {
 	private static final int threadsNum = 20;
 
 	
+	
+	/********************************* Constructors *********************************/
 	public MyModel(Controller controller)
 	{
 		this.controller = controller;
@@ -50,6 +62,11 @@ public class MyModel implements Model {
 
 	}
 	
+	
+	
+	
+	
+	/********************************** Methods *********************************/
 	@Override
 	public void generateMaze() {
 		
@@ -132,6 +149,13 @@ public class MyModel implements Model {
 	
 	
 	
+	
+	
+	/**
+	 * This save() function saves the maze with a name to file with filename 
+	 * @param name - name of the maze
+	 * @param fileName - name of the file
+	 */
 	@Override
 	public void saveMaze() {
 		
@@ -183,6 +207,15 @@ public class MyModel implements Model {
 		}
 	}
 
+	
+	
+	
+	
+	/**
+	 * This loadMaze() function loads a maze from a File.
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
 	@Override
 	public void loadMaze() {
 
@@ -240,7 +273,10 @@ public class MyModel implements Model {
 	
 	
 	
-	
+	/**
+	* This help() function prints out, all commands available for the user, to the console.
+	* @param HashMap<String, Command> commands - holds whole commands according to their name.
+	*/
 	@Override
 	public void help(HashMap<String, Command> commands) {
 		System.out.println("\n> Please type in command according to the list below: ");
@@ -277,7 +313,9 @@ public class MyModel implements Model {
 	
 	
 	
-	
+	/** 
+	 * This dir() function shows the content of a folder's path.
+	 */
 	@Override
 	public void dir() {
 
@@ -338,6 +376,12 @@ public class MyModel implements Model {
 
 	
 	
+	
+	
+	
+	/**
+	 * This display() function prints out the maze3d to the console. 
+	 */
 	@Override
 	public void display() {
 		
@@ -389,16 +433,12 @@ public class MyModel implements Model {
 
 	
 	
-	/************************* displayCroosSection (by x/y/z) method ***********************/
 	/**
-	 * the function displayCroosSection() display the cross section (x/y/z) by index as a 2D maze 
+	 * This displayCroosSection() function prints out to the console 
+	 * the cross section (x/y/z) of a maze3d, according to an index, as a 2D maze. 
 	 * X represents floors
-	 * Y Represents cols
-	 * Z Represents rows
-	 * 
-	 * @param userLineName 
-	 * @param userLineSection - (X/Y/Z) - floors/cols or rows
-	 * @param userLineIndex - index
+	 * Y Represents rows
+	 * Z Represents columns
 	 */
 	@Override
 	public void displayCroosSection() {
@@ -491,10 +531,20 @@ public class MyModel implements Model {
 
 		
 	}
-	/*************************End displayCroosSection (by x/y/z) method ***********************/
+
 	
 	
-	public int getCrossIndex(String sss) {
+	
+	
+	
+	/**
+	 * This getCrossIndex() asks the user to choose an index number according to the maze3d parameters.
+	 * @param String UserLineIndex - Defines the user's cross section choice.
+	 * X represents floors
+	 * Y Represents rows
+	 * Z Represents columns
+	 */
+	public int getCrossIndex(String UserLineIndex) {
 
 		Scanner input = new Scanner(System.in);
 		int userLineIndex = 0;
@@ -504,7 +554,7 @@ public class MyModel implements Model {
 
 		
 		
-		if(sss.equals("x"))
+		if(UserLineIndex.equals("x"))
 		{
 			do {
 				System.out.println("> Please type an index below "+tmpMaze3d.getFloor()+": ");
@@ -525,7 +575,7 @@ public class MyModel implements Model {
 			} while (userLineIndex < 0);
 		}
 		
-		if(sss.equals("X"))
+		if(UserLineIndex.equals("X"))
 		{
 			do {
 				System.out.println("> Please type an index below "+tmpMaze3d.getFloor()+": ");
@@ -545,7 +595,7 @@ public class MyModel implements Model {
 			} while (userLineIndex < 0);
 		}
 		
-		if(sss.equals("y"))
+		if(UserLineIndex.equals("y"))
 		{
 			do {
 				System.out.println("> Please type an index below "+tmpMaze3d.getRows()+": ");
@@ -564,7 +614,7 @@ public class MyModel implements Model {
 			} while (userLineIndex < 0);
 		}
 		
-		if(sss.equals("Y"))
+		if(UserLineIndex.equals("Y"))
 		{
 			do {
 				System.out.println("> Please type an index below "+tmpMaze3d.getRows()+": ");
@@ -582,7 +632,7 @@ public class MyModel implements Model {
 			} while (userLineIndex < 0);
 		}
 		
-		if(sss.equals("z"))
+		if(UserLineIndex.equals("z"))
 		{
 			do {
 				System.out.println("> Please type an index below "+tmpMaze3d.getCols()+": ");
@@ -601,7 +651,7 @@ public class MyModel implements Model {
 		}
 		
 		
-		if(sss.equals("Z"))
+		if(UserLineIndex.equals("Z"))
 		{
 			do {
 				System.out.println("> Please type an index below "+tmpMaze3d.getCols()+": ");
@@ -630,18 +680,10 @@ public class MyModel implements Model {
 	
 	
 	
-	/************************* solveMaze method ***********************/
+	
 	/**
-	 * the function solveMaze() Solving the Maze by the given Algorithm BFS,DFS or Best First Search
-	 * @param maze - the maze
-	 * @param name - name of Maze
-	 * @param search- searching Algorithm
-	 * @param sol - solution
+	 * This solveMaze() function solves the maze3d by the given Algorithm DFS or Best First Search.
 	 */
-	//המטודה תפתור את המבוך בת'רד נפרד באמצעות האלגוריתמים (אחד מהם)
-	//כשיהיה פתרון המודל יבקש מה controller
-	//להציג
-	//“solution for <name> is ready”
 	@Override
 	public void solveMaze() {
 		
@@ -754,14 +796,15 @@ public class MyModel implements Model {
 		
 
 	}
-	/************************* End solveMaze method ***********************/
 	
 	
 	
 	
 	
-	
-	/************************* displaySolution method ***********************/
+	/**
+	 * This displaySolution() function prints out a list of all maze3d positions 
+	 * leading to the goal position.
+	 */
 	public void displaySolution() {
 		
 		if(mazes.isEmpty()){
@@ -816,15 +859,13 @@ public class MyModel implements Model {
 		} while (!mazes.containsKey(name));
 
 	}
-	/************************* End displaySolution method ***********************/
 	
 	
 	
 	
 	
-	/************************* Exit method ***************************/
 	/**
-	 * the function Exit() we closed all the threads are working and close the Program
+	 * This Exit() function closes all threads working in the background and closes the program.
 	 */
 	public void Exit() {
 		for (int i = 0; i < threads.size(); i++) {
@@ -833,7 +874,6 @@ public class MyModel implements Model {
 		controller.displayMessage("all Thread are stoped");
 	
 	}
-	/************************* End Exit method ***********************/
 	
 	
 	
