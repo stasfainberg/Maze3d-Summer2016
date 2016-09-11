@@ -11,9 +11,9 @@ import controller.Commands.GenerateMazeCommand;
 import controller.Commands.HelpCommand;
 import controller.Commands.LoadMazeCommand;
 import controller.Commands.SaveMazeCommand;
+import controller.Commands.SolveCommand;
 //import controller.Commands.help;
 import model.Model;
-import sss.SolveCommand;
 import view.View;
 
 public class MyController implements Controller {
