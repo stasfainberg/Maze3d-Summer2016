@@ -1,6 +1,5 @@
 package controller;
 
-
 /**
  * <h1>Command</h1>
  * @author Stas Fainberg

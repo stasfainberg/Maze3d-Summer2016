@@ -4,18 +4,19 @@ import controller.Command;
 import model.Model;
 
 /**
- * *********** the Class DisplaySolutionCommand ***************
- * @author Stas Fainberg and Idan Levy
+ * <h1>DisplaySolutionCommand</h1>
+ * @author Stas Fainberg
  * @version 1.0
  * 
  */
 public class DisplaySolutionCommand implements Command {
 
+	/******************************* Data Members **************************/
+
 	Model model;
 	
-	/**
-	 * Constructor of DisplaySolutionCommand
-	 */
+	/******************************* Constructors **************************/
+
 	public DisplaySolutionCommand(Model model) {
 		super();
 		this.model = model;

@@ -4,18 +4,19 @@ import controller.Command;
 import model.Model;
 
 /**
- * *********** the Class ExitCommand ***************
- * @author Stas Fainberg and Idan Levy
+ * <h1>ExitCommand</h1>
+ * @author Stas Fainberg
  * @version 1.0
  * 
  */
 public class ExitCommand implements Command {
 
+	/******************************* Data Members **************************/
+
 	private Model model;
 
-	/**
-	 * Constructor of ExitCommand
-	 */
+	/******************************* Constructors **************************/
+
 	public ExitCommand(Model model) {
 		super();
 		this.model = model;

@@ -10,8 +10,6 @@ import controller.Command;
  * @author Stas Fainberg
  * @version 1.0
  */
-
-
 public interface Model {
 	
 	void generateMaze();

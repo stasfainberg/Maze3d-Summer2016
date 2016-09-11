@@ -22,6 +22,7 @@ import view.View;
  * <h1>MyController</h1>
  * @author Stas Fainberg
  * @version 1.0
+ * 
  */
 public class MyController implements Controller {
 	

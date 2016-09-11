@@ -30,7 +30,6 @@ import controller.Controller;
 import io.MyCompressorOutputStream;
 import io.MyDecompressorInputStream;
 
-
 /**
  *<h1>MyModel</h1>
  * @author Stas Fainberg
@@ -67,6 +66,14 @@ public class MyModel implements Model {
 	
 	
 	/********************************** Methods *********************************/
+	/**
+	 * This generateMaze() function generates a maze3d according to the usre's input.
+	 * During the runtime user is asked for parameters:
+	 * - Maze3d name.
+	 * - Maze3d floors number.
+	 * - Maze3d rows number.
+	 * - Maze3d columns number.
+	 */
 	@Override
 	public void generateMaze() {
 		
@@ -152,9 +159,9 @@ public class MyModel implements Model {
 	
 	
 	/**
-	 * This save() function saves the maze with a name to file with filename 
-	 * @param name - name of the maze
-	 * @param fileName - name of the file
+	 * This save() function saves the maze with a name to file with filename.
+	 * @param name - name of the maze.
+	 * @param fileName - name of the file.
 	 */
 	@Override
 	public void saveMaze() {
