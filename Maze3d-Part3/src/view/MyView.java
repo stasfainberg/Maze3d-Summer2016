@@ -7,7 +7,6 @@ import java.util.HashMap;
 import algorithms.mazeGenerators.Maze3d;
 import controller.Command;
 import controller.Controller;
-import sss.CLI;
 
 public class MyView implements View {
 
