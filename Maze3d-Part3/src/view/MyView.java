@@ -10,6 +10,7 @@ import controller.Controller;
 
 /**
  * <h1>MyView</h1>
+ * 
  * @author Stas Fainberg
  * This class displays all the output from the controller to the users session 
  */
@@ -21,14 +22,19 @@ public class MyView implements View {
 	private BufferedReader in;
 	private PrintWriter out;
 	private CLI cli;
-	private Controller controller;
 	private HashMap<String, Command> commands;
 	
 	
 	
 	/*********************** Constructors ************************/
-
-	public MyView(Controller controller, BufferedReader in, PrintWriter out)
+	/**
+	 * This MyView() constructor initiates:
+	 * <h1></h1>
+	 * private BufferedReader in 
+	 * <h1></h1>
+	 * private PrintWriter out;
+	 */
+	public MyView(BufferedReader in, PrintWriter out)
 	{		
 		this.in = in;
 		this.out = out;
@@ -37,15 +43,21 @@ public class MyView implements View {
 			
 	
 	/*************************************** Methods **********************************/
-
+	/**
+	 * This displayMessage() method prints out to the console a message, which is passed to it, 
+	 * as an error message.
+	 * @param String message - Holds the the string message to print out.
+	 */
 	@Override
 	public void displayMessage(String message) {
 		System.err.println(message);
-//		out.write(message);
-//		out.flush();
+
 				
 	}
 
+	/**
+	 * This start() method initiates the start() method, in the CLI class, as a separated thread.
+	 */
 	@Override
 	public void start() {
 		Thread thread = new Thread(new Runnable() {
@@ -63,7 +75,10 @@ public class MyView implements View {
 	
 	
 	
-	
+	/**
+	 * This sendCommands() method passes the commands HashMap to the CLI class.
+	 * So that if a user typing a command name it would be able to check if this command exist on the HashMap.
+	 */
 	@Override
 	public void sendCommands(HashMap<String, Command> commands) {
 		this.commands = commands;
@@ -72,7 +87,10 @@ public class MyView implements View {
 	
 	
 	
-	
+	/**
+	 * This displayMaze() method initiates toString() method of a Maze3d class and 
+	 * prints out the Maze3d to the console.
+	 */
 	@Override
 	public void displayMaze(Maze3d maze) {
 		out.write(maze.toString());
@@ -82,7 +100,9 @@ public class MyView implements View {
 	
 	
 	
-	
+	/**
+	 * This getCommands() method returns the HashMap holds all commands available to the user.
+	 */
 	public HashMap<String, Command> getCommands(){
 		return this.commands;
 		

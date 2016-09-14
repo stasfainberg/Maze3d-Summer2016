@@ -24,7 +24,12 @@ public class DisplayCommand implements Command {
 	}
 	
 	/******************************* Methods **************************/
-
+	/**
+	 * This doCommand() method located in the DisplayCommand class which is implementing the Command interface.
+	 * Executing this method will call the display() method located in the Model interface.
+	 * <h1></h1>
+	 * display() method can be implemented in any version by just implementing the Model interface.
+	 */
 	@Override
 	public void doCommand(String[] args) {
 		model.display();

@@ -23,9 +23,11 @@ public class DisplayCrossSectionCommand implements Command{
 	
 	/************************* doCommand() ***********************/
 	/**
-	 * This function displays cross section of the maze3d as a 2Dmaze.
-	 * by calling to method displayCroosSection() from MyModel
-	 * the function displayCroosSection() display the cross section (x/y/z) by index
+	 * This doCommand() method located in the DisplayCrossSectionCommand class which 
+	 * is implementing the Command interface.
+	 * Executing this method will call the displayCroosSection() method located in the Model interface.
+	 * <h1></h1>
+	 * displayCroosSection() method can be implemented in any version by just implementing the Model interface.
 	 */
 	@Override
 	public void doCommand(String[] args) {

@@ -7,6 +7,8 @@ import controller.Command;
 
 /**
  * <h1>Model</h1>
+ * Model interface.
+ * 
  * @author Stas Fainberg
  * @version 1.0
  */
@@ -22,7 +24,7 @@ public interface Model {
 	void displayCroosSection();
 	void solveMaze();
 	void displaySolution();
-	public void Exit();
+	public void exit();
 	
 	
 	

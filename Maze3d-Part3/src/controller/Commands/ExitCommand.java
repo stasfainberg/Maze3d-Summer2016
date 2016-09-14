@@ -26,13 +26,15 @@ public class ExitCommand implements Command {
 
 	/************************* doCommand() ***********************/
 	/**
-	 * the function call to method Exit from MyModel
-	 * in method Exit we closed all the threads are working and close the Program
+	 * This doCommand() method located in the ExitCommand class which is implementing the Command interface.
+	 * Executing this method will call the Exit() method located in the Model interface.
+	 * <h1></h1>
+	 * Exit() method can be implemented in any version by just implementing the Model interface.
 	 */
 	@Override
 	public void doCommand(String[] args) {
 		// TODO Auto-generated method stub
-		model.Exit();
+		model.exit();
 	}
 
 }

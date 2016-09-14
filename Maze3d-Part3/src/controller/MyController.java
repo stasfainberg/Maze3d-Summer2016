@@ -20,6 +20,8 @@ import view.View;
 
 /**
  * <h1>MyController</h1>
+ * My Implementation for Controller interface
+ * 
  * @author Stas Fainberg
  * @version 1.0
  * 

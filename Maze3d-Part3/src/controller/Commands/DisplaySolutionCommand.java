@@ -24,8 +24,11 @@ public class DisplaySolutionCommand implements Command {
 
 	/************************* doCommand() ***********************/
 	/**
-	 * the function display maze solution
-	 * @param args - Arguments -> args[0] - Name of the maze.
+	 * This doCommand() method located in the DisplaySolutionCommand class which 
+	 * is implementing the Command interface.
+	 * Executing this method will call the displaySolution() method located in the Model interface.
+	 * <h1></h1>
+	 * displaySolution() method can be implemented in any version by just implementing the Model interface.
 	 */
 	@Override
 	public void doCommand(String[] args){

@@ -874,7 +874,7 @@ public class MyModel implements Model {
 	/**
 	 * This Exit() function closes all threads working in the background and closes the program.
 	 */
-	public void Exit() {
+	public void exit() {
 		for (int i = 0; i < threads.size(); i++) {
 			threads.get(i).stop();
 		}

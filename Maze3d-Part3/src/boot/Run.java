@@ -22,7 +22,7 @@ public class Run {
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		PrintWriter out = new PrintWriter(System.out);
 		
-		View view = new MyView(controller, in, out);
+		View view = new MyView(in, out);
 		
 		
 		

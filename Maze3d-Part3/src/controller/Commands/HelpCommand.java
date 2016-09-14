@@ -28,7 +28,12 @@ public class HelpCommand implements Command {
 	
 	
 	/******************************* Methods **************************/
-
+	/**
+	 * This doCommand() method located in the HelpCommand class which is implementing the Command interface.
+	 * Executing this method will call the help() method located in the Model interface.
+	 * <h1></h1>
+	 * help() method can be implemented in any version by just implementing the Model interface.
+	 */
 	@Override
 	public void doCommand(String[] args) {
 		model.help(commands);

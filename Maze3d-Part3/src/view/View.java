@@ -7,6 +7,7 @@ import controller.Command;
 
 /**
  * <h1>View</h1>
+ * 
  * @author Stas Fainberg
  * @version 1.0
  */
