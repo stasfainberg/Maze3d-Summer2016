@@ -696,7 +696,7 @@ public class MyModel implements Model {
 		
 		if(mazes.isEmpty()){
 			
-			System.out.println("> Information>> Maze3d list is empty. Cannot perform 'solve_maze' action. Please generate or load maze3d.\n");
+			System.err.println("> Information>> Maze3d list is empty. Cannot perform 'solve_maze' action. Please generate or load maze3d.\n");
 
 			return;
 		}
