@@ -36,7 +36,7 @@ public class CLI{
 	/******************************* Methods *******************************/
 
 	public void start() {
-		System.out.println("==================================================================");
+		System.out.println("\n==================================================================");
 		System.out.println("==================== Welcome to CLI interface ====================");
 		Thread thread = new Thread(new Runnable() {
 

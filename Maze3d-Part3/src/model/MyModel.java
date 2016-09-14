@@ -167,7 +167,8 @@ public class MyModel implements Model {
 	public void saveMaze() {
 		
 		if(mazes.isEmpty()){
-			System.err.println("> Information>> Cannot perform 'save' operation. Maze was not generated!!!");
+			System.err.println("> Information>> Cannot perform 'save' operation. "
+					+ "Maze was not generated. Generate Maze3d first.");
 			return;
 		}
 
@@ -394,7 +395,8 @@ public class MyModel implements Model {
 		
 		
 		if(mazes.isEmpty()){
-			System.err.println("> Information>> Maze3d list is empty. No mazes to display!!!");
+			System.err.println("> Information>> Maze3d list is empty. No mazes to display. "
+					+ "Generate Maze3d first.");
 			return;
 		}	
 		
@@ -451,7 +453,7 @@ public class MyModel implements Model {
 	public void displayCroosSection() {
 	
 		if(mazes.isEmpty()){
-			System.err.println("> Information>> Maze3d list is empty. No mazes to display!!!");
+			System.err.println("> Information>> Maze3d list is empty. Please generate Maze3d first.");
 			return;
 		}	
 		
@@ -696,7 +698,8 @@ public class MyModel implements Model {
 		
 		if(mazes.isEmpty()){
 			
-			System.err.println("> Information>> Maze3d list is empty. Cannot perform 'solve_maze' action. Please generate or load maze3d.\n");
+			System.err.println("> Information>> Maze3d list is empty. Cannot perform 'solve_maze' action. "
+					+ "Please generate or load maze3d first.\n");
 
 			return;
 		}
@@ -815,7 +818,8 @@ public class MyModel implements Model {
 	public void displaySolution() {
 		
 		if(mazes.isEmpty()){
-			System.err.println("> Information>> Maze3d list is empty. Cannot display solution. Please generate or load maze3d.\n");
+			System.err.println("> Information>> Maze3d list is empty. Cannot display solution. "
+					+ "Please generate or load maze3d first.\n");
 			return;
 		}
 		
